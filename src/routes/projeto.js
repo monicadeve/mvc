@@ -1,11 +1,11 @@
 import express from 'express';
-import ProjetoController from '../controllers/projetoControllers';
+import ProjetoController from '../controllers/projetoControllers.js';
 
-const router = express.Router;
+const router = express.Router();
 
 router
-.length(ProjetoController.getAllprojetos)
-.post(ProjetoController.createProjetos)
+.get("/",ProjetoController.getAllprojetos)
+.post("/",ProjetoController.createProjetos)
 
 export default router;
 
